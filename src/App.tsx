@@ -26,6 +26,7 @@ const { Title, Text } = Typography;
 const { DirectoryTree } = Tree;
 
 const ROOT_DIR = '/';
+const SEARCH_KEYWORD = 'todo';
 
 interface DirInfo {
   selectedDir: string | null;
@@ -112,7 +113,7 @@ const Home = () => {
       });
     }
 
-    searchWord('todo', files, (index, file) => {
+    searchWord(SEARCH_KEYWORD, files, (index, file) => {
       setProgress({
         result: [],
         percent: Math.ceil(((index + 1) / totalFiles) * 100),

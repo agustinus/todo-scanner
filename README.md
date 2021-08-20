@@ -1,8 +1,19 @@
 # TODO SCANNER
+
 A simple 'todo' scanner to find a keyword 'todo' in all files.
+
 ## Tech Stack
+
 - Electron React Boilerplate (https://electron-react-boilerplate.js.org/)
 - Ant Design
+
+## Install Packages
+
+Install all dependencies:
+
+```bash
+yarn
+```
 
 ## Starting Development
 
