@@ -31,6 +31,22 @@ To package apps for the local platform:
 yarn package
 ```
 
+## Testing
+To run the test:
+
+```bash
+yarn test
+```
+
+To run the test with coverage:
+
+```bash
+yarn test-coverage
+```
+
+## How to Use
+![App Screenshot](app-screenshot.png)
+
 ## Docs
 
 [Electron React Boilerplate](https://electron-react-boilerplate.js.org/docs/installation)
