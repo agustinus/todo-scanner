@@ -20,7 +20,7 @@ import {
   scanAllFiles,
   SearchResult,
 } from './utils/fileHelper';
-import searchWord from './utils/searchHelper';
+import { searchWord } from './utils/searchHelper';
 
 const { Title, Text } = Typography;
 const { DirectoryTree } = Tree;

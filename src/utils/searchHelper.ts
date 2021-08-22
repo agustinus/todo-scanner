@@ -30,4 +30,4 @@ const searchWord = async (
   return result;
 };
 
-export default searchWord;
+export { searchWord, searchCallbackFn };
