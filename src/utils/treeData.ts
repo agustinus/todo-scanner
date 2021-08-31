@@ -4,7 +4,7 @@ interface Node extends DataNode {
   parent?: string | null;
 }
 
-const transverseBF = (handler: (node: Node) => void, root: Node) => {
+const traverseBF = (handler: (node: Node) => void, root: Node) => {
   const queue: Node[] = [];
   queue.push(root);
   let current: Node | undefined = queue.pop();
@@ -20,7 +20,7 @@ const transverseBF = (handler: (node: Node) => void, root: Node) => {
 };
 
 const addChildren = (data: Node[], target: Node, root: Node) => {
-  transverseBF((node) => {
+  traverseBF((node) => {
     if (node.key === target.key) {
       Object.assign(node, { children: data });
     }
@@ -28,4 +28,4 @@ const addChildren = (data: Node[], target: Node, root: Node) => {
   return root;
 };
 
-export { transverseBF, Node, addChildren };
+export { traverseBF, Node, addChildren };

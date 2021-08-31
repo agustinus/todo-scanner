@@ -1,4 +1,4 @@
-import { addChildren, Node, transverseBF } from '../treeData';
+import { addChildren, Node, traverseBF } from '../treeData';
 
 describe('treeData', () => {
   let data: Node;
@@ -25,9 +25,9 @@ describe('treeData', () => {
     data.children = generateChildrenData(10, 0);
   });
 
-  it('should transverse correctly', () => {
+  it('should traverse correctly', () => {
     const result: Node[] = [];
-    transverseBF((node) => {
+    traverseBF((node) => {
       result.push(node);
     }, data);
     expect(result[0].title).toEqual(`root`);
@@ -43,7 +43,7 @@ describe('treeData', () => {
     const targetNode = { key: '0-5' };
     const treeData = addChildren(children, targetNode, data);
     let result: Node | undefined;
-    transverseBF((node) => {
+    traverseBF((node) => {
       if (node.key === targetNode.key) {
         result = node;
       }
